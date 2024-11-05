@@ -6,7 +6,6 @@ const loadPosts = async () =>{
 }
 
 const displayPosts = (posts) =>{
-	console.log(posts);
     const postContainer = document.getElementById('post-container');
     posts.forEach(post => {
 			const {id, category, comment_count, description, image, isActive, title, author , posted_time, view_count} = post;
@@ -79,10 +78,47 @@ const postDetails = async (id)=>{
 	}
 };
 
+const latestPost = async() =>{
+	const url = await fetch(`https://openapi.programming-hero.com/api/retro-forum/latest-posts`);
+	const res = await url.json();
+	latestPostDisplay(res);
+}
 
-// const postDetailsShow = (data) =>{
-// 	const {id, category} = data;
-// 	console.log(id);
-// }
+const latestPostDisplay = (posts) =>{
+	posts.forEach(post => {
+		const {cover_image, profile_image, title, author, description} = post;
+		console.log(post);
+		const latestPostContainer = document.getElementById('latest-post-container');
+		const div = document.createElement('div');
+		div.classList.add('card', 'w-100', 'border-2',  'rounded-lg')
+		div.innerHTML = `
+			<div class="p-5">
+				<figure>
+					<img src="${cover_image}" alt="Shoes" class="rounded-xl" />
+				</figure>
+				<div class="pt-5">
+					<div class="flex mb-2">
+						<img class="mr-2" src="assets/images/calendar.svg" alt="calendar.png">
+						<p>${author.posted_date ? author.posted_date : 'Published date not found'}</p>
+					</div>
+					<div class="mb-2">
+						<h2 class="card-title text-black font-bold">${title}</h2>
+						<p>${description}</p>
+					</div>
+					<div class="flex justify-start items-start">
+						<span class="mr-2 block w-[50px] h-[50px] rounded-full bg-gray-300"></span>
+						<div>
+							<h3 class="text-black font-bold">${author.name}</h3>
+							<p>${author.designation ? author.designation : 'Not found'}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		`;
+		latestPostContainer.appendChild(div);
+	})
+}
+latestPost();
 
-loadPosts()
+
+loadPosts();
