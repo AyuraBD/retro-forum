@@ -12,53 +12,53 @@
 </head>
 <body>
 	<!-- Header started -->
-  <header class="container m-auto py-6 mb-4">
+  	<header class="container m-auto py-6 sm:py-2 lg:mb-4 md:mb-4 sm:mb-3 max-mb-3">
 		<div class="navbar">
-			<div class="navbar-start width-[40%]">
-				<a class="text-4xl text-black font-bold">ReTro</a>
+			<div class="navbar-start width-[30%]">
+				<a class="lg:text-4xl md:text-4xl sm:text-3xl max-sm:text-3xl text-black font-bold">ReTro</a>
 			</div>
-			<div class="navbar-end width-[60%]">
+			<div class="navbar-end width-[70%]">
 				<div class="navbar-end lg:flex mr-2">
 					<ul class="menu menu-horizontal gap-2 px-1">
-						<li><a class="tooltip bg-gray-100 rounded-full p-4 border-1" data-tip="Home"><img src="assets/images/home.svg" alt=""></a></li>
-						<li><a class="tooltip bg-gray-100 rounded-full p-4 border-1" data-tip="Edit"><img src="assets/images/pen.svg" alt=""></a></li>
-						<li><a class="tooltip bg-gray-100 rounded-full p-4 border-1" data-tip="Profile"><img src="assets/images/profile.svg" alt=""></a></li>
-						<li><a class="tooltip bg-gray-100 rounded-full p-4 border-1" data-tip="Flag"><img src="assets/images/flag.svg" alt=""></a></li>
+						<li><a class="tooltip bg-gray-100 rounded-full lg:p-4 md:p-3 sm:p-3 max-sm:p-2 border-1" data-tip="Home"><img src="assets/images/home.svg" alt=""></a></li>
+						<li><a class="tooltip bg-gray-100 rounded-full lg:p-4 md:p-3 sm:p-3 max-sm:p-2 border-1" data-tip="Edit"><img src="assets/images/pen.svg" alt=""></a></li>
+						<li><a class="tooltip bg-gray-100 rounded-full lg:p-4 md:p-3 sm:p-3 max-sm:p-2 border-1" data-tip="Profile"><img src="assets/images/profile.svg" alt=""></a></li>
+						<li><a class="tooltip bg-gray-100 rounded-full lg:p-4 md:p-3 sm:p-3 max-sm:p-2 border-1" data-tip="Flag"><img src="assets/images/flag.svg" alt=""></a></li>
 					</ul>
 				</div>
-				<a href="#" class="py-3 px-6 bg-[#797DFC] rounded-full text-1xl text-white">Sign in</a>
+				<a href="#" class="lg:py-3 md:py-3 sm:py-2 max-sm:py-2 lg:px-6 md:px-5 sm:px-3 max-sm:px-3 bg-[#797DFC] rounded-full text-1xl text-white">Sign in</a>
 			</div>
 		</div>
 	</header>
 	<!-- Header end -->
 
-	<main class="container m-auto">
+	<main class="container m-auto lg:p-0 md:p-0 sm:p-2 max-sm:p-2">
 		<!-- Banner start -->
-		 <section class="bg-[#12132D] bg-[url(assets/images/bgbanner.png)] bg-cover bg-no-repeat bg-bottom h-96 rounded-[2rem] mb-16">
-			<div class="p-12 flex justify-between items-center">
-				<div class="w-[50%]">
-					<h1 class="text-white font-bold sm:text-[30px] md:text-[40px] lg:text-[50px]">Welcome to the<br/> <span class="bg-gradient-to-r from-[#797DFC] bg-clip-text text-transparent">ReTro </span>Forum</h1>
+		 <section class="bg-[#12132D] bg-[url(assets/images/bgbanner.png)] bg-cover bg-no-repeat bg-bottom h-fit sm:h-fit rounded-[2rem] lg:mb-16 md:mb-10 sm:mb-8 max-sm:mb-6">
+			<div class="lg:p-12 md:p-8 sm:p-5 max-sm:p-5 flex lg:flex-row md:flex-col max-sm:flex-col lg:justify-between lg:items-center sm:justify-start sm:items-start">
+				<div class="lg:w-[50%] sm:w-full sm:mb-5 max-sm:mb-3">
+					<h1 class="text-white font-bold max-sm:text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px]">Welcome to the<br/> <span class="bg-gradient-to-r from-[#797DFC] bg-clip-text text-transparent">ReTro </span>Forum</h1>
 					<p class="mb-4 text-[18px]">Share your favorite opinion and win and wp forum coffee mug!</p>
-					<span class="bg-white rounded-full px-2 py-4">
+					<span class="bg-white rounded-full px-2 lg:py-4 md:py-4 max-sm:py-3 sm:py-3">
 						<input id="search-post" class="w-[50%] text-slate-950 bg-white foucs:border-0 focus:outline-none" type="text" placeholder="Search here anything">
 						<button onclick="searchPostText()" class="bg-[#797DFC] text-white font-semibold px-5 p-2 rounded-full">Search</button>
 					</span>
 				</div>
-				<div class="bg-white rounded-lg p-6 w-[30%]">
+				<div class="bg-white rounded-lg max-sm:p-3 p-6 lg:w-[30%] sm:w-2/3 max-sm:w-3/4">
 					<ul>
-						<li class="text-[20px] flex justify-between items-center">
+						<li class="lg:text-[20px] sm:text-[16px] flex justify-between items-center">
 							<span>Registered Users</span>
 							<span>01</span>
 						</li>
-						<li class="text-[20px] flex justify-between items-center">
+						<li class="lg:text-[20px] sm:text-[16px] flex justify-between items-center">
 							<span>Forum</span>
 							<span>05</span>
 						</li>
-						<li class="text-[20px] flex justify-between items-center">
+						<li class="lg:text-[20px] sm:text-[16px] flex justify-between items-center">
 							<span>Topics</span>
 							<span>01</span>
 						</li>
-						<li class="text-[20px] flex justify-between items-center">
+						<li class="lg:text-[20px] sm:text-[16px] flex justify-between items-center">
 							<span>Replies</span>
 							<span>01</span>
 						</li>
@@ -82,13 +82,13 @@
 			 </div>
 
 			<!-- Discuss content -->
-			<div class="flex justify-between items-start gap-5">
+			<div class="flex lg:flex-row md:flex-col sm:flex-col max-sm:flex-col justify-between items-start gap-5">
 				<!-- Left section -->
-				<div id="post-container" class="w-[70%]">
+				<div id="post-container" class="lg:w-[70%] md:w-full sm:w-full max-sm:w-full">
 					
 				</div>
 				 <!-- Right section -->
-				  <div class="w-[30%]">
+				  <div class="lg:w-[30%] md:w-full sm:w-full max-sm:w-full">
 						<div class="bg-[#12132D0D] p-3 rounded-xl">
 							<div class="mb-4 flex justify-between items-center">
 								<p class="text-black text-2xl font-bold">Title</p>
@@ -106,10 +106,10 @@
 		 <!-- Join our Forum -->
 		  <div class="my-10 container m-auto bg-[#12132D] rounded-3xl">
 			<div class="flex justify-between items-center">
-				<div class="text p-14">
-					<h1 class="text-3xl text-white font-bold mb-2">Join Our Forum</h1>
-					<p class="text-[18px]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
-					<button class="bg-[#797DFC] px-6 py-3 mt-3 rounded-full text-white text-xl">Registered Now</button>
+				<div class="text lg:p-14 md:p-10 sm:p-8 max-sm:p-4">
+					<h1 class="lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-2xl text-white font-bold mb-2">Join Our Forum</h1>
+					<p class="lg:text-[18px] md:text-[18px] max-sm:text-[16px]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+					<button class="bg-[#797DFC] px-6 lg:py-3 md:py-3 sm:py-2 max-sm:py-2 mt-3 rounded-full text-white lg:text-xl">Registered Now</button>
 				</div>
 				<div class="image pt-6">
 					<img src="assets/images/joinforum.png" alt="">
@@ -121,7 +121,7 @@
 		 <!-- Latest Post -->
 		  <div class="container">
 			<!-- Heading -->
-			<div class="heading w-1/2 m-auto text-center my-10">
+			<div class="heading lg:w-1/2 m-auto text-center my-10">
 				<h1 class="text-3xl text-[#12132D] font-bold mb-2">Latest Posts</h1>
 				<p class="text-[18px]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
 			</div>
