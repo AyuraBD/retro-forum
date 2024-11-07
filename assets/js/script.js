@@ -11,7 +11,7 @@ const displayPosts = (posts) =>{
 			const {id, category, comment_count, description, image, isActive, title, author , posted_time, view_count} = post;
 			const div = document.createElement('div');
         div.innerHTML = `
-          <div class="mb-4 bg-[#797DFC1A] rounded-3xl lg:p-10 md:p-5 sm:p-4 max-sm:p-3 single-post flex justify-start gap-5">
+          <div class="mb-4 bg-[#797DFC1A] rounded-3xl lg:p-10 md:p-5 sm:p-4 max-sm:p-3 single-post flex justify-start lg:gap-5 md:gap-5 sm:gap-3 max-sm:gap-2">
 			<div class="indicator">
 				<span id="indicator" class="indicator-item badge ${isActive ? 'badge-success' : 'badge-warning'}">
 				</span>
@@ -21,13 +21,13 @@ const displayPosts = (posts) =>{
 			</div>
 			<div class="w-full">
 				<div class="tags text-[#12132DCC] lg:text-[18px] font-bold] lg:mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">
-					<span class="mr-5"># ${category}</span>
+					<span class="mr-3"># ${category}</span>
 					<span>Author : ${author.name}</span>
 				</div>
-				<h1 class="lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-2xl text-black font-semibold mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">${title}</h1>
+				<h1 class="lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-xl text-black font-semibold mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">${title}</h1>
 				<p class="lg:mb-4 md:mb-4 sm:mb-3 max-sm:mb-2 text-[#12132DCC]">${description}</p>
 				<div class="flex justify-between items-center border-t-2  border-dashed lg:pt-4 md:pt-4 sm:pt-3 max-sm:pt-2">
-					<div class="flex gap-5 justify-start items-start text-[#12132DCC]">
+					<div class="flex lg:gap-5 md:gap-5 sm:gap-3 max-sm:gap-1 justify-start items-start text-[#12132DCC]">
 						<img src="assets/images/comment.svg" alt="">
 						<span>${comment_count}</span>
 						<img src="assets/images/eye.svg" alt="">
@@ -144,7 +144,7 @@ const searchPostDisplay = (posts) =>{
 		const {id, category, comment_count, description, image, isActive, title, author , posted_time, view_count} = post;
 		const div = document.createElement('div');
 	div.innerHTML = `
-	  <div class="mb-4 bg-[#797DFC1A] rounded-3xl lg:p-10 md:p-5 sm:p-4 max-sm:p-3 single-post flex justify-start gap-5">
+	  <div class="mb-4 bg-[#797DFC1A] rounded-3xl lg:p-10 md:p-5 sm:p-4 max-sm:p-3 single-post flex justify-start lg:gap-5 md:gap-5 sm:gap-3 max-sm:gap-2">
 			<div class="indicator">
 				<span id="indicator" class="indicator-item badge ${isActive ? 'badge-success' : 'badge-warning'}">
 				</span>
@@ -154,13 +154,13 @@ const searchPostDisplay = (posts) =>{
 			</div>
 			<div class="w-full">
 				<div class="tags text-[#12132DCC] lg:text-[18px] font-bold] lg:mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">
-					<span class="mr-5"># ${category}</span>
+					<span class="mr-3"># ${category}</span>
 					<span>Author : ${author.name}</span>
 				</div>
-				<h1 class="lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-2xl text-black font-semibold mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">${title}</h1>
+				<h1 class="lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-xl text-black font-semibold mb-4 md:mb-4 sm:mb-3 max-sm:mb-2">${title}</h1>
 				<p class="lg:mb-4 md:mb-4 sm:mb-3 max-sm:mb-2 text-[#12132DCC]">${description}</p>
 				<div class="flex justify-between items-center border-t-2  border-dashed lg:pt-4 md:pt-4 sm:pt-3 max-sm:pt-2">
-					<div class="flex gap-5 justify-start items-start text-[#12132DCC]">
+					<div class="flex lg:gap-5 md:gap-5 sm:gap-3 max-sm:gap-1 justify-start items-start text-[#12132DCC]">
 						<img src="assets/images/comment.svg" alt="">
 						<span>${comment_count}</span>
 						<img src="assets/images/eye.svg" alt="">
@@ -179,6 +179,8 @@ const searchPostDisplay = (posts) =>{
 })
 
 }
+
+// Loader
 const loader = (post) =>{
 	const  loader = document.getElementById('loader');
 	if(post){
