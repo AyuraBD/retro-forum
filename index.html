@@ -40,8 +40,8 @@
 					<h1 class="text-white font-bold sm:text-[30px] md:text-[40px] lg:text-[50px]">Welcome to the<br/> <span class="bg-gradient-to-r from-[#797DFC] bg-clip-text text-transparent">ReTro </span>Forum</h1>
 					<p class="mb-4 text-[18px]">Share your favorite opinion and win and wp forum coffee mug!</p>
 					<span class="bg-white rounded-full px-2 py-4">
-						<input class="w-[50%] bg-transparent foucs:border-0 focus:outline-none" type="text" placeholder="Search here anything">
-						<button class="bg-[#797DFC] text-white font-semibold px-5 p-2 rounded-full">Search</button>
+						<input id="search-post" class="w-[50%] text-slate-950 bg-white foucs:border-0 focus:outline-none" type="text" placeholder="Search here anything">
+						<button onclick="searchPostText()" class="bg-[#797DFC] text-white font-semibold px-5 p-2 rounded-full">Search</button>
 					</span>
 				</div>
 				<div class="bg-white rounded-lg p-6 w-[30%]">
@@ -75,6 +75,11 @@
 				<h1 class="font-bold text-3xl mb-2 text-black">Let's Discuss</h1>
 				<p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
 			</div>
+
+			<!-- Search Loader -->
+			<div id="loader" class="text-center w-full h-36 hidden">
+				<span class="loading loading-spinner text-primary"></span>
+			 </div>
 
 			<!-- Discuss content -->
 			<div class="flex justify-between items-start gap-5">
